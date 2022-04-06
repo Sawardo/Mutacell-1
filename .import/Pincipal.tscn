@@ -5,8 +5,8 @@
 
 [node name="Pincipal" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 443, 280 )
-
 [node name="pj1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 292, 79 )
+
+[node name="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 443, 280 )

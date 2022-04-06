@@ -6,15 +6,17 @@
 bounce = 0.2
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 9.875 )
 
 [node name="Node2D" type="StaticBody2D"]
 physics_material_override = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.5 )
 scale = Vector2( 30, 4 )
 shape = SubResource( 1 )
 
-[node name="Icon" type="Sprite" parent="CollisionShape2D"]
-position = Vector2( -0.0333333, 0.25001 )
-scale = Vector2( 0.3125, 0.289063 )
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( -0.999999, -0.499951 )
+scale = Vector2( 9.375, 1.20313 )
 texture = ExtResource( 1 )
