@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var SPEED = 100
+var SPEED = 200
 var ACCELERATION = 500
 var GRAVITY = 400
 
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	velocity.y += GRAVITY * delta
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = -2 * SPEED
+		velocity.y = -1.4 * SPEED
 	
 	
 	

@@ -257,6 +257,8 @@ radius = 8.0
 height = 4.0
 
 [node name="pj1" type="KinematicBody2D"]
+position = Vector2( -76, -2 )
+scale = Vector2( 1.7, 1.7 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -281,5 +283,10 @@ shape = SubResource( 3 )
 [node name="Pivot" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Pivot"]
+position = Vector2( 2.94118, 2.94118 )
 texture = ExtResource( 1 )
+offset = Vector2( -2.94118, -2.94118 )
 vframes = 5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
