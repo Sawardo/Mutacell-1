@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Ball and Chain Bot/idle.png" type="Texture" id=1]
 [ext_resource path="res://scripts/pj1.gd" type="Script" id=2]
 [ext_resource path="res://Ball and Chain Bot/run.png" type="Texture" id=3]
 [ext_resource path="res://Ball and Chain Bot/charge.png" type="Texture" id=4]
 [ext_resource path="res://Ball and Chain Bot/attack.png" type="Texture" id=5]
+[ext_resource path="res://Shotgunner/idle.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -43,6 +44,42 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.94118, -2.94118 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.588235 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pivot/Sprite:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=22]
@@ -86,6 +123,42 @@ tracks/2/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.94118, -2.94118 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.588235 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pivot/Sprite:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=17]
 resource_name = "fall"
@@ -126,6 +199,42 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.94118, -2.94118 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.588235 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pivot/Sprite:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -168,6 +277,107 @@ tracks/2/keys = {
 "update": 1,
 "values": [ 5 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.94118, -2.94118 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.588235 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pivot/Sprite:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "idlegun"
+length = 0.56
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 30, -1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.8 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "jump"
@@ -208,6 +418,42 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.94118, -2.94118 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.588235 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pivot/Sprite:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -250,6 +496,42 @@ tracks/2/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 5 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.94118, -2.94118 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.588235 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pivot/Sprite:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=23]
 animation = "attack1"
@@ -284,36 +566,40 @@ animation = "run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=21]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=15]
 states/attack1/node = SubResource( 23 )
-states/attack1/position = Vector2( 236.333, 102.654 )
+states/attack1/position = Vector2( 847, 126.654 )
 states/fall/node = SubResource( 18 )
-states/fall/position = Vector2( 940.333, 159.444 )
+states/fall/position = Vector2( 405.666, 192.777 )
 states/idle/node = SubResource( 6 )
-states/idle/position = Vector2( 468.333, 42.4075 )
+states/idle/position = Vector2( 223.148, 82.4075 )
 states/jump/node = SubResource( 7 )
-states/jump/position = Vector2( 474.111, 159 )
+states/jump/position = Vector2( 230.111, 187 )
 states/run/node = SubResource( 8 )
-states/run/position = Vector2( 933.667, 41.6667 )
-transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "run", "jump", SubResource( 13 ), "jump", "run", SubResource( 14 ), "jump", "fall", SubResource( 19 ), "fall", "idle", SubResource( 20 ), "fall", "run", SubResource( 21 ), "idle", "attack1", SubResource( 24 ), "attack1", "idle", SubResource( 25 ), "jump", "attack1", SubResource( 26 ), "attack1", "jump", SubResource( 27 ), "attack1", "run", SubResource( 28 ), "run", "attack1", SubResource( 29 ), "attack1", "fall", SubResource( 30 ), "fall", "attack1", SubResource( 31 ) ]
+states/run/position = Vector2( 406.999, 80.8767 )
+transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "run", "jump", SubResource( 13 ), "jump", "run", SubResource( 14 ), "jump", "fall", SubResource( 19 ), "fall", "idle", SubResource( 20 ), "fall", "run", SubResource( 21 ), "run", "attack1", SubResource( 33 ), "idle", "attack1", SubResource( 34 ), "jump", "attack1", SubResource( 35 ), "fall", "attack1", SubResource( 36 ), "attack1", "run", SubResource( 37 ), "attack1", "idle", SubResource( 38 ), "attack1", "fall", SubResource( 39 ), "attack1", "jump", SubResource( 40 ) ]
 start_node = "idle"
-graph_offset = Vector2( -11.3859, 0 )
+graph_offset = Vector2( -11.3859, 21.9471 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
@@ -331,13 +617,13 @@ anims/RESET = SubResource( 1 )
 anims/attack1 = SubResource( 22 )
 anims/fall = SubResource( 17 )
 anims/idle = SubResource( 2 )
+anims/idlegun = SubResource( 32 )
 anims/jump = SubResource( 5 )
 anims/run = SubResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 15 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -349,7 +635,6 @@ position = Vector2( -9.53674e-06, -0.588236 )
 
 [node name="Sprite" type="Sprite" parent="Pivot"]
 position = Vector2( 0, 0.588235 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 offset = Vector2( -2.94118, -2.94118 )
 vframes = 5
