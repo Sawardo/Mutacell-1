@@ -5,6 +5,7 @@
 [ext_resource path="res://mapa_demo.tscn" type="PackedScene" id=3]
 
 [node name="Pincipal" type="Node2D"]
+position = Vector2( 1, 0 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 3 )]
 
