@@ -40,8 +40,12 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("change"):
 		if a == 1:
+			playback.travel("transida")
+			playback.travel("transgunvue")
 			a = 2
 		elif a == 2:
+			playback.travel("transgunida")
+			playback.travel("transvue")
 			a = 1
 
 	# Animation
