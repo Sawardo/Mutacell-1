@@ -14,6 +14,8 @@ onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 onready var pivot = $Pivot
+onready var colision = $collatigo
+
 
 func _ready():
 	anim_tree.active = true
@@ -49,10 +51,12 @@ func _physics_process(delta):
 			playback.travel("transvue")
 			a = 1
 
-	# Animation
+# Whip
 	if a == 1:
 		if Input.is_action_just_pressed("ataque"):
 			playback.travel("attack1")
+			colision.disabled = false
+			#temporizador
 			print("hem")
 		elif is_on_floor():
 			if abs(velocity.x) > 10:
@@ -64,8 +68,10 @@ func _physics_process(delta):
 				playback.travel("fall")
 			else:
 				playback.travel("jump")
+		
+		
 
-
+# Gun
 	if a == 2:
 		if is_on_floor():
 			if abs(velocity.x) > 10:
