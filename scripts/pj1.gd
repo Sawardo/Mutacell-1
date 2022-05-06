@@ -8,18 +8,18 @@ var GRAVITY = 400
 var velocity = Vector2()
 
 
-
+onready var areaLatigo = $Pivot/areaLatigo
 onready var sprite = $Pivot/Sprite
 onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 onready var pivot = $Pivot
-onready var colision = $collatigo
+
 
 
 func _ready():
 	anim_tree.active = true
-
+	areaLatigo.connect("body_entered", self, "_on_body_entered")
 
 func _physics_process(delta):
 	
@@ -51,12 +51,12 @@ func _physics_process(delta):
 			playback.travel("transvue")
 			a = 1
 
+
+
 # Whip
 	if a == 1:
 		if Input.is_action_just_pressed("ataque"):
 			playback.travel("attack1")
-			colision.disabled = false
-			#temporizador
 			print("hem")
 		elif is_on_floor():
 			if abs(velocity.x) > 10:
@@ -68,6 +68,7 @@ func _physics_process(delta):
 				playback.travel("fall")
 			else:
 				playback.travel("jump")
+			
 		
 		
 
@@ -89,3 +90,15 @@ func _physics_process(delta):
 		pivot.scale.x = 1
 	if Input.is_action_pressed("left") and not Input.is_action_just_pressed("right"):
 		pivot.scale.x = -1
+
+func _on_body_entered(body: Node):
+	if body.has_method("take_damage"):
+		body.take_damage()
+
+
+
+
+
+
+
+

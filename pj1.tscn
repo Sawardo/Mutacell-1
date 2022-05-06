@@ -85,6 +85,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pivot/areaLatigo/collatigo:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=22]
 resource_name = "attack1"
@@ -161,6 +173,18 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pivot/areaLatigo/collatigo:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.28 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=17]
@@ -1145,7 +1169,7 @@ states/transvue/node = SubResource( 56 )
 states/transvue/position = Vector2( 458.429, 263.068 )
 transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "run", "jump", SubResource( 13 ), "jump", "run", SubResource( 14 ), "jump", "fall", SubResource( 19 ), "fall", "idle", SubResource( 20 ), "fall", "run", SubResource( 21 ), "run", "attack1", SubResource( 33 ), "idle", "attack1", SubResource( 34 ), "jump", "attack1", SubResource( 35 ), "fall", "attack1", SubResource( 36 ), "attack1", "run", SubResource( 37 ), "attack1", "idle", SubResource( 38 ), "attack1", "fall", SubResource( 39 ), "attack1", "jump", SubResource( 40 ), "transida", "transgunvue", SubResource( 57 ), "transgunida", "transvue", SubResource( 58 ), "idlegun", "rungun", SubResource( 59 ), "idlegun", "jumpgun", SubResource( 60 ), "rungun", "idlegun", SubResource( 61 ), "rungun", "jumpgun", SubResource( 62 ), "jumpgun", "fallgun", SubResource( 63 ), "fallgun", "idlegun", SubResource( 64 ), "jumpgun", "rungun", SubResource( 65 ), "jumpgun", "idlegun", SubResource( 66 ), "fallgun", "rungun", SubResource( 67 ), "idle", "transida", SubResource( 68 ), "run", "transida", SubResource( 69 ), "jump", "transida", SubResource( 70 ), "transgunvue", "idlegun", SubResource( 71 ), "idlegun", "transgunida", SubResource( 72 ), "rungun", "transgunida", SubResource( 73 ), "jumpgun", "transgunida", SubResource( 74 ), "fallgun", "transgunida", SubResource( 75 ), "transvue", "idle", SubResource( 76 ), "fall", "transida", SubResource( 77 ) ]
 start_node = "idle"
-graph_offset = Vector2( -349.358, 65.9577 )
+graph_offset = Vector2( -157.288, 24.1443 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
@@ -1160,6 +1184,8 @@ height = 31.7647
 [node name="pj1" type="KinematicBody2D"]
 position = Vector2( -76, -2 )
 scale = Vector2( 1.7, 1.7 )
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1190,6 +1216,19 @@ shape = SubResource( 3 )
 [node name="Pivot" type="Node2D" parent="."]
 position = Vector2( -9.53674e-06, -0.588236 )
 
+[node name="areaLatigo" type="Area2D" parent="Pivot"]
+position = Vector2( 1.14441e-05, 0.588236 )
+scale = Vector2( 1, 1 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="collatigo" type="CollisionShape2D" parent="Pivot/areaLatigo"]
+position = Vector2( 30.5882, 2.35294 )
+rotation = 1.5708
+scale = Vector2( 1, 1 )
+shape = SubResource( 78 )
+disabled = true
+
 [node name="Sprite" type="Sprite" parent="Pivot"]
 position = Vector2( 0, 0.588235 )
 texture = ExtResource( 1 )
@@ -1199,9 +1238,3 @@ vframes = 5
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -9.53674e-06, -2.38419e-07 )
 current = true
-
-[node name="collatigo" type="CollisionShape2D" parent="."]
-position = Vector2( 30.5882, 2.35294 )
-rotation = 1.5708
-shape = SubResource( 78 )
-disabled = true
