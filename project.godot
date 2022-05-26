@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Mutacell 1"
-run/main_scene="res://.import/Pincipal.tscn"
+run/main_scene="res://menu/Menu Inicio.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://menu/new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://menu/Menu Inicio.gd" type="Script" id=2]
+[ext_resource path="res://menu/font/80s-retro-future.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Menu Inicio" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 423.0
+margin_top = 233.0
+margin_right = 600.0
+margin_bottom = 343.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 170.0
+margin_bottom = 103.0
+
+[node name="Titulo" type="Label" parent="PanelContainer/VBoxContainer"]
+margin_right = 163.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 1 )
+text = "MUTACELL"
+align = 1
+
+[node name="Play" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 163.0
+margin_bottom = 67.0
+size_flags_horizontal = 5
+size_flags_vertical = 5
+text = "PLAY"
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_top = 71.0
+margin_right = 163.0
+margin_bottom = 96.0
+text = "QUIT"
