@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=113 format=2]
 
 [ext_resource path="res://Ball and Chain Bot/idle.png" type="Texture" id=1]
 [ext_resource path="res://scripts/pj1.gd" type="Script" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://Shotgunner/run.png" type="Texture" id=8]
 [ext_resource path="res://Shotgunner/attack.png" type="Texture" id=9]
 [ext_resource path="res://Ball and Chain Bot/hit.png" type="Texture" id=10]
+[ext_resource path="res://Archer/run.png" type="Texture" id=11]
+[ext_resource path="res://Archer/hit.png" type="Texture" id=12]
+[ext_resource path="res://Archer/idle.png" type="Texture" id=13]
+[ext_resource path="res://Archer/Special Attack without FX.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -264,6 +268,72 @@ tracks/5/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=80]
+resource_name = "fallarch"
+length = 0.45
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.9 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15, 26 ) ]
+}
+
 [sub_resource type="Animation" id=45]
 resource_name = "fallgun"
 length = 0.6
@@ -404,6 +474,71 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "idlearch"
+length = 0.45
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15, -21 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.9 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
 }
 
 [sub_resource type="Animation" id=32]
@@ -548,6 +683,72 @@ tracks/5/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=82]
+resource_name = "jumparch"
+length = 0.45
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.9 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15, 26 ) ]
+}
+
 [sub_resource type="Animation" id=44]
 resource_name = "jumpgun"
 length = 0.6
@@ -690,6 +891,71 @@ tracks/5/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=79]
+resource_name = "runarch"
+length = 0.75
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.9 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15, -21 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
 [sub_resource type="Animation" id=42]
 resource_name = "rungun"
 length = 0.8
@@ -755,11 +1021,139 @@ tracks/4/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
+[sub_resource type="Animation" id=83]
+resource_name = "transarchida"
+length = 0.22
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15, -22 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.9 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=84]
+resource_name = "transarchvue"
+length = 0.22
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15, -22 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.9 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
 [sub_resource type="Animation" id=46]
 resource_name = "transgunida"
-length = 0.37
-loop = true
-step = 0.3
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pivot/Sprite:texture")
 tracks/0/interp = 1
@@ -815,7 +1209,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 1, 0 ]
@@ -823,9 +1217,8 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=41]
 resource_name = "transgunvue"
-length = 0.37
-loop = true
-step = 0.3
+length = 0.4
+step = 0.35
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pivot/Sprite:texture")
 tracks/0/interp = 1
@@ -881,7 +1274,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.35 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 0, 1 ]
@@ -889,9 +1282,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=47]
 resource_name = "transida"
-length = 0.37
-loop = true
-step = 0.3
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pivot/Sprite:texture")
 tracks/0/interp = 1
@@ -947,7 +1338,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 0, 1 ]
@@ -955,9 +1346,8 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=48]
 resource_name = "transvue"
-length = 0.37
-loop = true
-step = 0.3
+length = 0.4
+step = 0.35
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pivot/Sprite:texture")
 tracks/0/interp = 1
@@ -1013,7 +1403,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.35 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 1, 0 ]
@@ -1025,11 +1415,17 @@ animation = "attack1"
 [sub_resource type="AnimationNodeAnimation" id=18]
 animation = "fall"
 
+[sub_resource type="AnimationNodeAnimation" id=89]
+animation = "fallarch"
+
 [sub_resource type="AnimationNodeAnimation" id=49]
 animation = "fallgun"
 
 [sub_resource type="AnimationNodeAnimation" id=6]
 animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=90]
+animation = "idlearch"
 
 [sub_resource type="AnimationNodeAnimation" id=50]
 animation = "idlegun"
@@ -1037,14 +1433,26 @@ animation = "idlegun"
 [sub_resource type="AnimationNodeAnimation" id=7]
 animation = "jump"
 
+[sub_resource type="AnimationNodeAnimation" id=91]
+animation = "jumparch"
+
 [sub_resource type="AnimationNodeAnimation" id=51]
 animation = "jumpgun"
 
 [sub_resource type="AnimationNodeAnimation" id=8]
 animation = "run"
 
+[sub_resource type="AnimationNodeAnimation" id=92]
+animation = "runarch"
+
 [sub_resource type="AnimationNodeAnimation" id=52]
 animation = "rungun"
+
+[sub_resource type="AnimationNodeAnimation" id=87]
+animation = "transarchida"
+
+[sub_resource type="AnimationNodeAnimation" id=88]
+animation = "transarchvue"
 
 [sub_resource type="AnimationNodeAnimation" id=53]
 animation = "transgunida"
@@ -1096,12 +1504,6 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=40]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=57]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=58]
-switch_mode = 2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=59]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=60]
@@ -1126,8 +1528,6 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=70]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=71]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=72]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=73]
@@ -1136,40 +1536,101 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=75]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=76]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=77]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=85]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=86]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=93]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=94]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=95]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=96]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=97]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=98]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=99]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=100]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=101]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=102]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=103]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=104]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=105]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=106]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=107]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=108]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=109]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=110]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=111]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=15]
 states/attack1/node = SubResource( 23 )
 states/attack1/position = Vector2( -54.3333, 179.987 )
 states/fall/node = SubResource( 18 )
-states/fall/position = Vector2( 186.597, 365.247 )
+states/fall/position = Vector2( 95.9303, 317.247 )
+states/fallarch/node = SubResource( 89 )
+states/fallarch/position = Vector2( 888.744, 563.594 )
 states/fallgun/node = SubResource( 49 )
-states/fallgun/position = Vector2( 988.431, 355.463 )
+states/fallgun/position = Vector2( 1196.43, 310.286 )
 states/idle/node = SubResource( 6 )
-states/idle/position = Vector2( 195.057, 72.3664 )
+states/idle/position = Vector2( 304.39, 80.3664 )
+states/idlearch/node = SubResource( 90 )
+states/idlearch/position = Vector2( 272.296, 563.911 )
 states/idlegun/node = SubResource( 50 )
-states/idlegun/position = Vector2( 985.042, 84.3943 )
+states/idlegun/position = Vector2( 898.005, 114.135 )
 states/jump/node = SubResource( 7 )
-states/jump/position = Vector2( 186.578, 263.034 )
+states/jump/position = Vector2( 147.911, 239.034 )
+states/jumparch/node = SubResource( 91 )
+states/jumparch/position = Vector2( 709.059, 568.269 )
 states/jumpgun/node = SubResource( 51 )
-states/jumpgun/position = Vector2( 988.243, 256.261 )
+states/jumpgun/position = Vector2( 1106.91, 257.795 )
 states/run/node = SubResource( 8 )
-states/run/position = Vector2( 189.869, 163.543 )
+states/run/position = Vector2( 203.202, 152.723 )
+states/runarch/node = SubResource( 92 )
+states/runarch/position = Vector2( 476.744, 569.306 )
 states/rungun/node = SubResource( 52 )
-states/rungun/position = Vector2( 989.802, 169.63 )
+states/rungun/position = Vector2( 992.469, 191.424 )
+states/transarchida/node = SubResource( 87 )
+states/transarchida/position = Vector2( 467.077, 448.528 )
+states/transarchvue/node = SubResource( 88 )
+states/transarchvue/position = Vector2( 691.077, 446.898 )
 states/transgunida/node = SubResource( 53 )
-states/transgunida/position = Vector2( 710.972, 271.801 )
+states/transgunida/position = Vector2( 840.321, 333.767 )
 states/transgunvue/node = SubResource( 54 )
-states/transgunvue/position = Vector2( 711.647, 155.921 )
+states/transgunvue/position = Vector2( 689.998, 238.128 )
 states/transida/node = SubResource( 55 )
-states/transida/position = Vector2( 456.947, 156.383 )
+states/transida/position = Vector2( 435.614, 238.14 )
 states/transvue/node = SubResource( 56 )
-states/transvue/position = Vector2( 458.429, 263.068 )
-transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "run", "jump", SubResource( 13 ), "jump", "run", SubResource( 14 ), "jump", "fall", SubResource( 19 ), "fall", "idle", SubResource( 20 ), "fall", "run", SubResource( 21 ), "run", "attack1", SubResource( 33 ), "idle", "attack1", SubResource( 34 ), "jump", "attack1", SubResource( 35 ), "fall", "attack1", SubResource( 36 ), "attack1", "run", SubResource( 37 ), "attack1", "idle", SubResource( 38 ), "attack1", "fall", SubResource( 39 ), "attack1", "jump", SubResource( 40 ), "transida", "transgunvue", SubResource( 57 ), "transgunida", "transvue", SubResource( 58 ), "idlegun", "rungun", SubResource( 59 ), "idlegun", "jumpgun", SubResource( 60 ), "rungun", "idlegun", SubResource( 61 ), "rungun", "jumpgun", SubResource( 62 ), "jumpgun", "fallgun", SubResource( 63 ), "fallgun", "idlegun", SubResource( 64 ), "jumpgun", "rungun", SubResource( 65 ), "jumpgun", "idlegun", SubResource( 66 ), "fallgun", "rungun", SubResource( 67 ), "idle", "transida", SubResource( 68 ), "run", "transida", SubResource( 69 ), "jump", "transida", SubResource( 70 ), "transgunvue", "idlegun", SubResource( 71 ), "idlegun", "transgunida", SubResource( 72 ), "rungun", "transgunida", SubResource( 73 ), "jumpgun", "transgunida", SubResource( 74 ), "fallgun", "transgunida", SubResource( 75 ), "transvue", "idle", SubResource( 76 ), "fall", "transida", SubResource( 77 ) ]
+states/transvue/position = Vector2( 321.408, 325.374 )
+transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "run", "jump", SubResource( 13 ), "jump", "run", SubResource( 14 ), "jump", "fall", SubResource( 19 ), "fall", "idle", SubResource( 20 ), "fall", "run", SubResource( 21 ), "run", "attack1", SubResource( 33 ), "idle", "attack1", SubResource( 34 ), "jump", "attack1", SubResource( 35 ), "fall", "attack1", SubResource( 36 ), "attack1", "run", SubResource( 37 ), "attack1", "idle", SubResource( 38 ), "attack1", "fall", SubResource( 39 ), "attack1", "jump", SubResource( 40 ), "idlegun", "rungun", SubResource( 59 ), "idlegun", "jumpgun", SubResource( 60 ), "rungun", "idlegun", SubResource( 61 ), "rungun", "jumpgun", SubResource( 62 ), "jumpgun", "fallgun", SubResource( 63 ), "fallgun", "idlegun", SubResource( 64 ), "jumpgun", "rungun", SubResource( 65 ), "jumpgun", "idlegun", SubResource( 66 ), "fallgun", "rungun", SubResource( 67 ), "idle", "transida", SubResource( 68 ), "run", "transida", SubResource( 69 ), "jump", "transida", SubResource( 70 ), "idlegun", "transgunida", SubResource( 72 ), "rungun", "transgunida", SubResource( 73 ), "jumpgun", "transgunida", SubResource( 74 ), "fallgun", "transgunida", SubResource( 75 ), "fall", "transida", SubResource( 77 ), "transida", "transgunvue", SubResource( 85 ), "transgunida", "transvue", SubResource( 86 ), "transarchida", "transvue", SubResource( 93 ), "transarchida", "transgunvue", SubResource( 94 ), "transida", "transarchvue", SubResource( 95 ), "transgunida", "transarchvue", SubResource( 96 ), "idlearch", "runarch", SubResource( 97 ), "idlearch", "jumparch", SubResource( 98 ), "runarch", "idlearch", SubResource( 99 ), "runarch", "jumparch", SubResource( 100 ), "jumparch", "fallarch", SubResource( 101 ), "fallarch", "runarch", SubResource( 102 ), "fallarch", "idlearch", SubResource( 103 ), "jumparch", "runarch", SubResource( 104 ), "idlearch", "transarchida", SubResource( 105 ), "runarch", "transarchida", SubResource( 106 ), "jumparch", "transarchida", SubResource( 107 ), "fallarch", "transarchida", SubResource( 108 ), "transvue", "idle", SubResource( 109 ), "transgunvue", "idlegun", SubResource( 110 ), "transarchvue", "idlearch", SubResource( 111 ) ]
 start_node = "idle"
-graph_offset = Vector2( -157.288, 24.1443 )
+graph_offset = Vector2( 151.494, 260.75 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
@@ -1192,13 +1653,19 @@ script = ExtResource( 2 )
 anims/RESET = SubResource( 1 )
 anims/attack1 = SubResource( 22 )
 anims/fall = SubResource( 17 )
+anims/fallarch = SubResource( 80 )
 anims/fallgun = SubResource( 45 )
 anims/idle = SubResource( 2 )
+anims/idlearch = SubResource( 81 )
 anims/idlegun = SubResource( 32 )
 anims/jump = SubResource( 5 )
+anims/jumparch = SubResource( 82 )
 anims/jumpgun = SubResource( 44 )
 anims/run = SubResource( 4 )
+anims/runarch = SubResource( 79 )
 anims/rungun = SubResource( 42 )
+anims/transarchida = SubResource( 83 )
+anims/transarchvue = SubResource( 84 )
 anims/transgunida = SubResource( 46 )
 anims/transgunvue = SubResource( 41 )
 anims/transida = SubResource( 47 )
@@ -1218,14 +1685,12 @@ position = Vector2( -9.53674e-06, -0.588236 )
 
 [node name="areaLatigo" type="Area2D" parent="Pivot"]
 position = Vector2( 1.14441e-05, 0.588236 )
-scale = Vector2( 1, 1 )
 collision_layer = 4
 collision_mask = 4
 
 [node name="collatigo" type="CollisionShape2D" parent="Pivot/areaLatigo"]
 position = Vector2( 30.5882, 2.35294 )
 rotation = 1.5708
-scale = Vector2( 1, 1 )
 shape = SubResource( 78 )
 disabled = true
 
