@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=2]
+[gd_scene load_steps=112 format=2]
 
 [ext_resource path="res://Ball and Chain Bot/idle.png" type="Texture" id=1]
 [ext_resource path="res://scripts/pj1.gd" type="Script" id=2]
@@ -1451,7 +1451,7 @@ animation = "rungun"
 [sub_resource type="AnimationNodeAnimation" id=87]
 animation = "transarchida"
 
-[sub_resource type="AnimationNodeAnimation" id=88]
+[sub_resource type="AnimationNodeAnimation" id=111]
 animation = "transarchvue"
 
 [sub_resource type="AnimationNodeAnimation" id=53]
@@ -1550,12 +1550,6 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=94]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=95]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=96]
-switch_mode = 2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=97]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=98]
@@ -1586,7 +1580,10 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=110]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=111]
+[sub_resource type="AnimationNodeStateMachineTransition" id=112]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=113]
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=15]
@@ -1618,19 +1615,19 @@ states/rungun/node = SubResource( 52 )
 states/rungun/position = Vector2( 992.469, 191.424 )
 states/transarchida/node = SubResource( 87 )
 states/transarchida/position = Vector2( 467.077, 448.528 )
-states/transarchvue/node = SubResource( 88 )
-states/transarchvue/position = Vector2( 691.077, 446.898 )
+states/transarchvue/node = SubResource( 111 )
+states/transarchvue/position = Vector2( 702.161, 448.196 )
 states/transgunida/node = SubResource( 53 )
-states/transgunida/position = Vector2( 840.321, 333.767 )
+states/transgunida/position = Vector2( 829.654, 341.767 )
 states/transgunvue/node = SubResource( 54 )
 states/transgunvue/position = Vector2( 689.998, 238.128 )
 states/transida/node = SubResource( 55 )
 states/transida/position = Vector2( 435.614, 238.14 )
 states/transvue/node = SubResource( 56 )
 states/transvue/position = Vector2( 321.408, 325.374 )
-transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "run", "jump", SubResource( 13 ), "jump", "run", SubResource( 14 ), "jump", "fall", SubResource( 19 ), "fall", "idle", SubResource( 20 ), "fall", "run", SubResource( 21 ), "run", "attack1", SubResource( 33 ), "idle", "attack1", SubResource( 34 ), "jump", "attack1", SubResource( 35 ), "fall", "attack1", SubResource( 36 ), "attack1", "run", SubResource( 37 ), "attack1", "idle", SubResource( 38 ), "attack1", "fall", SubResource( 39 ), "attack1", "jump", SubResource( 40 ), "idlegun", "rungun", SubResource( 59 ), "idlegun", "jumpgun", SubResource( 60 ), "rungun", "idlegun", SubResource( 61 ), "rungun", "jumpgun", SubResource( 62 ), "jumpgun", "fallgun", SubResource( 63 ), "fallgun", "idlegun", SubResource( 64 ), "jumpgun", "rungun", SubResource( 65 ), "jumpgun", "idlegun", SubResource( 66 ), "fallgun", "rungun", SubResource( 67 ), "idle", "transida", SubResource( 68 ), "run", "transida", SubResource( 69 ), "jump", "transida", SubResource( 70 ), "idlegun", "transgunida", SubResource( 72 ), "rungun", "transgunida", SubResource( 73 ), "jumpgun", "transgunida", SubResource( 74 ), "fallgun", "transgunida", SubResource( 75 ), "fall", "transida", SubResource( 77 ), "transida", "transgunvue", SubResource( 85 ), "transgunida", "transvue", SubResource( 86 ), "transarchida", "transvue", SubResource( 93 ), "transarchida", "transgunvue", SubResource( 94 ), "transida", "transarchvue", SubResource( 95 ), "transgunida", "transarchvue", SubResource( 96 ), "idlearch", "runarch", SubResource( 97 ), "idlearch", "jumparch", SubResource( 98 ), "runarch", "idlearch", SubResource( 99 ), "runarch", "jumparch", SubResource( 100 ), "jumparch", "fallarch", SubResource( 101 ), "fallarch", "runarch", SubResource( 102 ), "fallarch", "idlearch", SubResource( 103 ), "jumparch", "runarch", SubResource( 104 ), "idlearch", "transarchida", SubResource( 105 ), "runarch", "transarchida", SubResource( 106 ), "jumparch", "transarchida", SubResource( 107 ), "fallarch", "transarchida", SubResource( 108 ), "transvue", "idle", SubResource( 109 ), "transgunvue", "idlegun", SubResource( 110 ), "transarchvue", "idlearch", SubResource( 111 ) ]
+transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "run", SubResource( 11 ), "run", "idle", SubResource( 12 ), "run", "jump", SubResource( 13 ), "jump", "run", SubResource( 14 ), "jump", "fall", SubResource( 19 ), "fall", "idle", SubResource( 20 ), "fall", "run", SubResource( 21 ), "run", "attack1", SubResource( 33 ), "idle", "attack1", SubResource( 34 ), "jump", "attack1", SubResource( 35 ), "fall", "attack1", SubResource( 36 ), "attack1", "run", SubResource( 37 ), "attack1", "idle", SubResource( 38 ), "attack1", "fall", SubResource( 39 ), "attack1", "jump", SubResource( 40 ), "idlegun", "rungun", SubResource( 59 ), "idlegun", "jumpgun", SubResource( 60 ), "rungun", "idlegun", SubResource( 61 ), "rungun", "jumpgun", SubResource( 62 ), "jumpgun", "fallgun", SubResource( 63 ), "fallgun", "idlegun", SubResource( 64 ), "jumpgun", "rungun", SubResource( 65 ), "jumpgun", "idlegun", SubResource( 66 ), "fallgun", "rungun", SubResource( 67 ), "idle", "transida", SubResource( 68 ), "run", "transida", SubResource( 69 ), "jump", "transida", SubResource( 70 ), "idlegun", "transgunida", SubResource( 72 ), "rungun", "transgunida", SubResource( 73 ), "jumpgun", "transgunida", SubResource( 74 ), "fallgun", "transgunida", SubResource( 75 ), "fall", "transida", SubResource( 77 ), "transida", "transgunvue", SubResource( 85 ), "transgunida", "transvue", SubResource( 86 ), "transarchida", "transvue", SubResource( 93 ), "transarchida", "transgunvue", SubResource( 94 ), "idlearch", "runarch", SubResource( 97 ), "idlearch", "jumparch", SubResource( 98 ), "runarch", "idlearch", SubResource( 99 ), "runarch", "jumparch", SubResource( 100 ), "jumparch", "fallarch", SubResource( 101 ), "fallarch", "runarch", SubResource( 102 ), "fallarch", "idlearch", SubResource( 103 ), "jumparch", "runarch", SubResource( 104 ), "idlearch", "transarchida", SubResource( 105 ), "runarch", "transarchida", SubResource( 106 ), "jumparch", "transarchida", SubResource( 107 ), "fallarch", "transarchida", SubResource( 108 ), "transvue", "idle", SubResource( 109 ), "transgunvue", "idlegun", SubResource( 110 ), "transgunida", "transarchvue", SubResource( 112 ), "transarchvue", "idlearch", SubResource( 113 ) ]
 start_node = "idle"
-graph_offset = Vector2( 151.494, 260.75 )
+graph_offset = Vector2( -44.8393, 373.106 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
