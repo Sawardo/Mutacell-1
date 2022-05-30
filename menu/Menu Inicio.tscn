@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://menu/new_theme.tres" type="Theme" id=1]
 [ext_resource path="res://menu/Menu Inicio.gd" type="Script" id=2]
 [ext_resource path="res://menu/font/80s-retro-future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://sislal2.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -48,3 +49,8 @@ margin_top = 71.0
 margin_right = 163.0
 margin_bottom = 96.0
 text = "QUIT"
+
+[node name="Sislal2" type="Sprite" parent="."]
+position = Vector2( 511, 277 )
+scale = Vector2( 1.18969, 0.691568 )
+texture = ExtResource( 4 )
