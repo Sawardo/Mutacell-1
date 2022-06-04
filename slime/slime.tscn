@@ -306,8 +306,6 @@ animation = "walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=23]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=27]
@@ -317,6 +315,9 @@ animation = "walk"
 [sub_resource type="AnimationNodeStateMachineTransition" id=29]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=15]
 states/death/node = SubResource( 19 )
@@ -329,8 +330,9 @@ states/jump/node = SubResource( 7 )
 states/jump/position = Vector2( 686, 51 )
 states/walk/node = SubResource( 8 )
 states/walk/position = Vector2( 301, 265 )
-transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "walk", SubResource( 11 ), "walk", "idle", SubResource( 12 ), "walk", "jump", SubResource( 13 ), "jump", "walk", SubResource( 14 ), "walk", "hurt", SubResource( 21 ), "jump", "hurt", SubResource( 23 ), "hurt", "idle", SubResource( 25 ), "idle", "hurt", SubResource( 26 ), "idle", "death", SubResource( 27 ), "jump", "death", SubResource( 28 ), "hurt", "death", SubResource( 29 ), "walk", "death", SubResource( 30 ) ]
+transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "walk", SubResource( 11 ), "walk", "idle", SubResource( 12 ), "walk", "jump", SubResource( 13 ), "jump", "walk", SubResource( 14 ), "walk", "hurt", SubResource( 21 ), "jump", "hurt", SubResource( 23 ), "idle", "hurt", SubResource( 26 ), "idle", "death", SubResource( 27 ), "jump", "death", SubResource( 28 ), "hurt", "death", SubResource( 29 ), "walk", "death", SubResource( 30 ), "hurt", "idle", SubResource( 33 ) ]
 start_node = "idle"
+graph_offset = Vector2( 0, 40.9285 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
@@ -364,7 +366,6 @@ anims/walk = SubResource( 3 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 15 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 16 )
 
 [node name="AreaDeteccion" type="Area2D" parent="."]
