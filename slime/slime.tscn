@@ -239,7 +239,6 @@ start_node = "idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
 [node name="slime" type="KinematicBody2D"]
-position = Vector2( 469, 159 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
