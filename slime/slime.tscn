@@ -1,14 +1,12 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://slime/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_Idle.png" type="Texture" id=1]
 [ext_resource path="res://slime/slime.gd" type="Script" id=2]
 [ext_resource path="res://slime/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_Walk.png" type="Texture" id=3]
 [ext_resource path="res://slime/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_JumpGround.png" type="Texture" id=4]
-[ext_resource path="res://slime/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_HurtHeavy.png" type="Texture" id=5]
-[ext_resource path="res://slime/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_HurtDeath.png" type="Texture" id=6]
 
-[sub_resource type="CapsuleShape2D" id=31]
-radius = 13.0
+[sub_resource type="CircleShape2D" id=4]
+radius = 19.0263
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -61,86 +59,6 @@ tracks/3/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=17]
-resource_name = "death"
-length = 1.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 6 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 14 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13 ]
-}
-
-[sub_resource type="Animation" id=18]
-resource_name = "hurt"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 5 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 7 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 5, 6 ]
-}
-
 [sub_resource type="Animation" id=2]
 resource_name = "idle"
 length = 0.7
@@ -152,7 +70,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 0.1 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ ExtResource( 1 ) ]
@@ -186,52 +104,52 @@ tracks/2/keys = {
 resource_name = "jump"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprite:hframes")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ) ]
+"values": [ 11, 11 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:vframes")
+tracks/1/path = NodePath("Sprite:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 0.9 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1 ]
+"values": [ ExtResource( 4 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:frame")
+tracks/2/path = NodePath("Sprite:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+"values": [ 1 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:hframes")
+tracks/3/path = NodePath("Sprite:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 11 ]
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -269,17 +187,23 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 0.490844 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 10 ]
 }
-
-[sub_resource type="AnimationNodeAnimation" id=19]
-animation = "death"
-
-[sub_resource type="AnimationNodeAnimation" id=20]
-animation = "hurt"
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.490844 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=6]
 animation = "idle"
@@ -302,47 +226,20 @@ animation = "walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=14]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=26]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=27]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=29]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=33]
-switch_mode = 2
-
 [sub_resource type="AnimationNodeStateMachine" id=15]
-states/death/node = SubResource( 19 )
-states/death/position = Vector2( 491, 221 )
-states/hurt/node = SubResource( 20 )
-states/hurt/position = Vector2( 686, 265 )
 states/idle/node = SubResource( 6 )
 states/idle/position = Vector2( 301, 51 )
 states/jump/node = SubResource( 7 )
-states/jump/position = Vector2( 686, 51 )
+states/jump/position = Vector2( 542, 51 )
 states/walk/node = SubResource( 8 )
-states/walk/position = Vector2( 301, 265 )
-transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "walk", SubResource( 11 ), "walk", "idle", SubResource( 12 ), "walk", "jump", SubResource( 13 ), "jump", "walk", SubResource( 14 ), "walk", "hurt", SubResource( 21 ), "jump", "hurt", SubResource( 23 ), "idle", "hurt", SubResource( 26 ), "idle", "death", SubResource( 27 ), "jump", "death", SubResource( 28 ), "hurt", "death", SubResource( 29 ), "walk", "death", SubResource( 30 ), "hurt", "idle", SubResource( 33 ) ]
+states/walk/position = Vector2( 414, 157 )
+transitions = [ "idle", "jump", SubResource( 9 ), "jump", "idle", SubResource( 10 ), "idle", "walk", SubResource( 11 ), "walk", "idle", SubResource( 12 ), "walk", "jump", SubResource( 13 ), "jump", "walk", SubResource( 14 ) ]
 start_node = "idle"
-graph_offset = Vector2( 0, 40.9285 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
-[sub_resource type="CircleShape2D" id=32]
-radius = 205.061
-
 [node name="slime" type="KinematicBody2D"]
 position = Vector2( 469, 159 )
-collision_layer = 5
-collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -351,14 +248,11 @@ texture = ExtResource( 1 )
 hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3, 0 )
-rotation = 1.5708
-shape = SubResource( 31 )
+position = Vector2( 4, 2 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
-anims/death = SubResource( 17 )
-anims/hurt = SubResource( 18 )
 anims/idle = SubResource( 2 )
 anims/jump = SubResource( 5 )
 anims/walk = SubResource( 3 )
@@ -367,10 +261,3 @@ anims/walk = SubResource( 3 )
 tree_root = SubResource( 15 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 16 )
-
-[node name="AreaDeteccion" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion"]
-shape = SubResource( 32 )

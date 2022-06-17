@@ -5,14 +5,11 @@
 [ext_resource path="res://mapa_demo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemy1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://EnemyElectric.tscn" type="PackedScene" id=5]
-[ext_resource path="res://slime/slime.tscn" type="PackedScene" id=5]
-
 
 [node name="Pincipal" type="Node2D"]
 position = Vector2( 1, 0 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 11, -7 )
 
 [node name="Node2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( -645, 301 )
@@ -23,8 +20,5 @@ position = Vector2( 532, -26 )
 [node name="pj1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 376, -64.9999 )
 
-
 [node name="EnemyEye" parent="." instance=ExtResource( 5 )]
 position = Vector2( 162, -32 )
-[node name="slime" parent="." instance=ExtResource( 5 )]
-position = Vector2( 76, -106 )
