@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://palpiso.tscn" type="PackedScene" id=1]
 [ext_resource path="res://pj1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://mapa_demo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemy1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://slime/slime.tscn" type="PackedScene" id=5]
 
 [node name="Pincipal" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -18,3 +19,9 @@ position = Vector2( 532, -26 )
 
 [node name="pj1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 376, -64.9999 )
+
+[node name="slime2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 89, -55 )
+
+[node name="slime" parent="." instance=ExtResource( 5 )]
+position = Vector2( 931, -421 )

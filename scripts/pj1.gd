@@ -136,7 +136,6 @@ func _physics_process(delta):
 				playback.travel("jumparch")
 
 
-
 	if Input.is_action_pressed("right") and not Input.is_action_just_pressed("left"):
 		pivot.scale.x = 1
 	if Input.is_action_pressed("left") and not Input.is_action_just_pressed("right"):
