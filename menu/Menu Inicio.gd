@@ -8,7 +8,7 @@ func _ready():
 	quit.connect("pressed",self,"_on_quit_pressed")
 
 func _on_play_pressed():
-	get_tree().change_scene("res://.import/Pincipal.tscn")
+	var _e = get_tree().change_scene("res://.import/Pincipal.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()

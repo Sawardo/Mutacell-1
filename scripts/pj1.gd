@@ -17,19 +17,22 @@ onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 onready var pivot = $Pivot
-
+onready var rayCastLatigo = $Pivot/RayCastLatigo
 
 
 func _ready():
 	anim_tree.active = true
 	areaLatigo.connect("body_entered", self, "_on_body_entered")
+	rayCastLatigo.add_exception(self)
 
 func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	if dasheando:
+		move_and_slide(vectorcito*1000)
 		if get_slide_count() > 0:
+			velocity.y = -1.4 * SPEED
 			dasheando = false
 	else:
 		
@@ -87,12 +90,17 @@ func _physics_process(delta):
 			print("hem")
 		elif Input.is_action_just_pressed("sataque"):
 			playback.travel("attack1")
-			if specialattackposition:
-				vectorcito = (specialattackposition - global_position).normalized()
-				velocity = move_and_slide(vectorcito*1000)
+			if rayCastLatigo.is_colliding():
+				var target = rayCastLatigo.get_collider()
+				vectorcito = global_position.direction_to(target.global_position)
+				print_debug(vectorcito)
+				move_and_slide(vectorcito*1000)
 				dasheando = true
-				vectorcito = null
-				specialattackposition = null
+				
+#			if specialattackposition:
+#				vectorcito = (specialattackposition - global_position).normalized()
+#				vectorcito = null
+#				specialattackposition = null
 				
 			print("meh")
 		elif is_on_floor():

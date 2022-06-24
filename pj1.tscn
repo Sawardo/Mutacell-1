@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=2]
+[gd_scene load_steps=114 format=2]
 
 [ext_resource path="res://Ball and Chain Bot/idle.png" type="Texture" id=1]
 [ext_resource path="res://scripts/pj1.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Archer/hit.png" type="Texture" id=12]
 [ext_resource path="res://Archer/idle.png" type="Texture" id=13]
 [ext_resource path="res://Archer/Special Attack without FX.png" type="Texture" id=14]
+[ext_resource path="res://Shotgunner/shotgun blast.png" type="Texture" id=15]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -189,6 +190,83 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=114]
+resource_name = "attackgun"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2.94118, -2.94118 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Sprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pivot/Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 30, -1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pivot/Sprite:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.8 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pivot/Sprite:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
 [sub_resource type="Animation" id=17]
@@ -1649,6 +1727,7 @@ script = ExtResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
 anims/attack1 = SubResource( 22 )
+anims/attackgun = SubResource( 114 )
 anims/fall = SubResource( 17 )
 anims/fallarch = SubResource( 80 )
 anims/fallgun = SubResource( 45 )
@@ -1684,6 +1763,7 @@ position = Vector2( -9.53674e-06, -0.588236 )
 position = Vector2( 1.14441e-05, 0.588236 )
 collision_layer = 4
 collision_mask = 4
+monitorable = false
 
 [node name="collatigo" type="CollisionShape2D" parent="Pivot/areaLatigo"]
 position = Vector2( 30.5882, 2.35294 )
@@ -1696,6 +1776,11 @@ position = Vector2( 0, 0.588235 )
 texture = ExtResource( 1 )
 offset = Vector2( -2.94118, -2.94118 )
 vframes = 5
+
+[node name="RayCastLatigo" type="RayCast2D" parent="Pivot"]
+enabled = true
+cast_to = Vector2( 50, 0 )
+collision_mask = 6
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -9.53674e-06, -2.38419e-07 )
