@@ -53,23 +53,6 @@ func _physics_process(delta):
 	
 	
 	# Change Character
-	if Input.is_action_just_pressed("change"):
-		if a == 1:
-			playback.travel("transida")
-			playback.travel("transgunvue")
-			a = 2
-		elif a == 2:
-			playback.travel("transgunida")
-			playback.travel("transarchvue")
-			a = 3
-		elif a == 3:
-			playback.travel("transarchida")
-			playback.travel("transvue")
-			a = 1
-	
-	
-	
-# Change Character
 	#if Input.is_action_just_pressed("change"):
 	#	if a == 1:
 	#		playback.travel("transida")
@@ -77,8 +60,25 @@ func _physics_process(delta):
 	#		a = 2
 	#	elif a == 2:
 	#		playback.travel("transgunida")
+	#		playback.travel("transarchvue")
+	#		a = 3
+	#	elif a == 3:
+	#		playback.travel("transarchida")
 	#		playback.travel("transvue")
 	#		a = 1
+	
+	
+	
+ #Change Character
+	if Input.is_action_just_pressed("change"):
+		if a == 1:
+			playback.travel("transida")
+			playback.travel("transgunvue")
+			a = 2
+		elif a == 2:
+			playback.travel("transgunida")
+			playback.travel("transvue")
+			a = 1
 
 
 
@@ -89,7 +89,7 @@ func _physics_process(delta):
 			specialattackposition = null
 			print("hem")
 		elif Input.is_action_just_pressed("sataque"):
-			playback.travel("attack1")
+			playback.travel("attack2")
 			if rayCastLatigo.is_colliding():
 				var target = rayCastLatigo.get_collider()
 				vectorcito = global_position.direction_to(target.global_position)
