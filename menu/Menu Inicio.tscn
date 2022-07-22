@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://menu/new_theme.tres" type="Theme" id=1]
 [ext_resource path="res://menu/Menu Inicio.gd" type="Script" id=2]
 [ext_resource path="res://menu/font/80s-retro-future.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://For_Frodo_Banner.jpg" type="Texture" id=4]
+[ext_resource path="res://ab67706c0000bebb064ea9c1fb57651f28b6e793.jpg" type="Texture" id=4]
+[ext_resource path="res://1200px-Color_negro.webp" type="Texture" id=5]
+[ext_resource path="res://dark-cloud-psd-407065.png" type="Texture" id=6]
+[ext_resource path="res://174-1742095_nubes-negras-png-cloud-png-clipart.png" type="Texture" id=7]
+[ext_resource path="res://580b585b2edbce24c47b2639.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -29,9 +33,22 @@ margin_top = 7.0
 margin_right = 170.0
 margin_bottom = 103.0
 
-[node name="ForFrodoBanner" type="Sprite" parent="PanelContainer/VBoxContainer"]
-position = Vector2( 86, 66 )
+[node name="Ab67706C0000Bebb064Ea9C1Fb57651F28B6E793" type="Sprite" parent="PanelContainer/VBoxContainer"]
+position = Vector2( 75, -64.1875 )
+scale = Vector2( 1.07891, 1.06562 )
 texture = ExtResource( 4 )
+
+[node name="Dark-cloud-psd-407065" type="Sprite" parent="PanelContainer/VBoxContainer/Ab67706C0000Bebb064Ea9C1Fb57651F28B6E793"]
+position = Vector2( 94.5402, 224.457 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407066" type="Sprite" parent="PanelContainer/VBoxContainer/Ab67706C0000Bebb064Ea9C1Fb57651F28B6E793"]
+position = Vector2( 46.3433, 216.95 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407067" type="Sprite" parent="PanelContainer/VBoxContainer/Ab67706C0000Bebb064Ea9C1Fb57651F28B6E793"]
+position = Vector2( 176.104, 194.428 )
+texture = ExtResource( 6 )
 
 [node name="Titulo" type="Label" parent="PanelContainer/VBoxContainer"]
 margin_right = 163.0
@@ -53,3 +70,123 @@ margin_top = 71.0
 margin_right = 163.0
 margin_bottom = 96.0
 text = "QUIT"
+
+[node name="1200Px-ColorNegro" type="Sprite" parent="."]
+position = Vector2( 933.375, 297.052 )
+scale = Vector2( 0.187708, 0.887087 )
+texture = ExtResource( 5 )
+
+[node name="1200Px-ColorNegro2" type="Sprite" parent="."]
+position = Vector2( 98.0001, 289 )
+scale = Vector2( 0.187708, 0.887087 )
+texture = ExtResource( 5 )
+
+[node name="Dark-cloud-psd-407066" type="Sprite" parent="."]
+position = Vector2( 115, 206 )
+scale = Vector2( 1.575, 1.70759 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407065" type="Sprite" parent="."]
+position = Vector2( 49.5, 18.406 )
+scale = Vector2( 1.2225, 1.15274 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407068" type="Sprite" parent="."]
+position = Vector2( 99, 25 )
+texture = ExtResource( 6 )
+
+[node name="1200Px-ColorNegro3" type="Sprite" parent="."]
+position = Vector2( 514, 479.804 )
+scale = Vector2( 0.62, 0.356664 )
+texture = ExtResource( 5 )
+
+[node name="Dark-cloud-psd-407071" type="Sprite" parent="."]
+position = Vector2( 847, 102 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407067" type="Sprite" parent="."]
+position = Vector2( 368, -392 )
+scale = Vector2( 1.575, 1.68156 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407077" type="Sprite" parent="."]
+position = Vector2( 687, 406 )
+scale = Vector2( 0.605101, 0.574141 )
+texture = ExtResource( 6 )
+
+[node name="174-1742095Nubes-negras-png-cloud-png-clipart3" type="Sprite" parent="."]
+position = Vector2( 399, 494 )
+scale = Vector2( 0.605101, 0.574141 )
+texture = ExtResource( 7 )
+
+[node name="Dark-cloud-psd-407078" type="Sprite" parent="."]
+position = Vector2( 651, 397 )
+scale = Vector2( 0.605101, 0.574141 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407080" type="Sprite" parent="."]
+position = Vector2( 538, 403 )
+scale = Vector2( 0.687051, 0.60416 )
+texture = ExtResource( 6 )
+
+[node name="174-1742095Nubes-negras-png-cloud-png-clipart2" type="Sprite" parent="."]
+position = Vector2( 959, 383 )
+scale = Vector2( 0.687051, 0.60416 )
+texture = ExtResource( 7 )
+
+[node name="174-1742095Nubes-negras-png-cloud-png-clipart" type="Sprite" parent="."]
+position = Vector2( 131, 479 )
+scale = Vector2( 0.687051, 0.60416 )
+texture = ExtResource( 7 )
+
+[node name="Dark-cloud-psd-407072" type="Sprite" parent="."]
+position = Vector2( 139, 60 )
+texture = ExtResource( 6 )
+
+[node name="580B585B2Edbce24C47B2639" type="Sprite" parent="."]
+position = Vector2( 15, 108 )
+scale = Vector2( 0.351886, 0.396596 )
+texture = ExtResource( 8 )
+
+[node name="580B585B2Edbce24C47B2640" type="Sprite" parent="."]
+position = Vector2( 21, 241 )
+scale = Vector2( 0.379527, 0.366667 )
+texture = ExtResource( 8 )
+
+[node name="Dark-cloud-psd-407069" type="Sprite" parent="."]
+position = Vector2( 135, -18 )
+texture = ExtResource( 6 )
+
+[node name="580B585B2Edbce24C47B2642" type="Sprite" parent="."]
+position = Vector2( 953, 222 )
+scale = Vector2( 0.364185, 0.427907 )
+texture = ExtResource( 8 )
+
+[node name="580B585B2Edbce24C47B2641" type="Sprite" parent="."]
+position = Vector2( 1002, 61 )
+scale = Vector2( 0.34331, 0.397093 )
+texture = ExtResource( 8 )
+
+[node name="Dark-cloud-psd-407070" type="Sprite" parent="."]
+position = Vector2( 938, -4 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407073" type="Sprite" parent="."]
+position = Vector2( 52, 603 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407074" type="Sprite" parent="."]
+position = Vector2( 298, 568 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407075" type="Sprite" parent="."]
+position = Vector2( 683, 568 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407079" type="Sprite" parent="."]
+position = Vector2( 988, 589 )
+texture = ExtResource( 6 )
+
+[node name="Dark-cloud-psd-407076" type="Sprite" parent="."]
+position = Vector2( 866, 548 )
+texture = ExtResource( 6 )
