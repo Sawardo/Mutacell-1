@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://Ball and Chain Bot/idle.png" type="Texture" id=1]
 [ext_resource path="res://scripts/pj1.gd" type="Script" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://Archer/idle.png" type="Texture" id=13]
 [ext_resource path="res://Archer/Special Attack without FX.png" type="Texture" id=14]
 [ext_resource path="res://Shotgunner/shotgun blast.png" type="Texture" id=15]
+[ext_resource path="res://oak_woods_v1.0/background/background_layer_3.png" type="Texture" id=16]
+[ext_resource path="res://oak_woods_v1.0/background/background_layer_2.png" type="Texture" id=17]
+[ext_resource path="res://oak_woods_v1.0/background/background_layer_1.png" type="Texture" id=18]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -1753,7 +1756,6 @@ radius = 7.05883
 height = 31.7647
 
 [node name="pj1" type="KinematicBody2D"]
-position = Vector2( -76, -2 )
 scale = Vector2( 1.7, 1.7 )
 collision_layer = 3
 collision_mask = 3
@@ -1821,3 +1823,34 @@ collision_mask = 6
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -9.53674e-06, -2.38419e-07 )
 current = true
+limit_left = 0
+limit_top = 0
+limit_bottom = 900
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 1600, 0 )
+
+[node name="BackgroundLayer1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 18 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1600, 0 )
+
+[node name="BackgroundLayer2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 17 )
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1600, 0 )
+
+[node name="BackgroundLayer3" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 16 )
+centered = false

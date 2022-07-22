@@ -1,8 +1,6 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://oak_woods_v1.0/oak_woods_tileset.png" type="Texture" id=1]
-[ext_resource path="res://oak_woods_v1.0/background/background_layer_3.png" type="Texture" id=2]
-[ext_resource path="res://oak_woods_v1.0/background/background_layer_1.png" type="Texture" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=39]
@@ -666,23 +664,6 @@ points = PoolVector2Array( 0, 0, 24, 0, 24, 24, 0, 24 )
 13/z_index = 0
 
 [node name="Node2D" type="Node2D"]
-
-[node name="backgound1" type="Sprite" parent="."]
-position = Vector2( 400, -398 )
-scale = Vector2( 4.5, 4.5 )
-texture = ExtResource( 3 )
-
-[node name="backgound1" type="Sprite" parent="backgound1"]
-position = Vector2( 320, -0.419009 )
-scale = Vector2( 1, 0.995345 )
-texture = ExtResource( 3 )
-
-[node name="backgound3" type="Sprite" parent="backgound1"]
-texture = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="backgound1"]
-position = Vector2( 320, 0 )
-texture = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )

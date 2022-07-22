@@ -9,6 +9,7 @@ func _ready():
 
 func _on_play_pressed():
 	var _e = get_tree().change_scene("res://.import/Pincipal.tscn")
+	
 
 func _on_quit_pressed():
 	get_tree().quit()
