@@ -24,7 +24,7 @@ position = Vector2( -645, 301 )
 position = Vector2( 890, 435 )
 
 [node name="pj1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 207, 485 )
+position = Vector2( 73, 529 )
 
 [node name="slime2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2001, 564 )
@@ -45,7 +45,7 @@ position = Vector2( 1667, 541 )
 position = Vector2( 1754, 305 )
 
 [node name="Area2D" parent="Enemy5" instance=ExtResource( 7 )]
-position = Vector2( -698, 927 )
+position = Vector2( -712, 948 )
 
 [node name="Area2D2" parent="Enemy5" instance=ExtResource( 7 )]
 position = Vector2( 1414, 934 )
@@ -60,7 +60,7 @@ position = Vector2( 2384, 1034 )
 position = Vector2( 2299, -334 )
 
 [node name="Area2D" parent="Enemy5/Area2D5" instance=ExtResource( 8 )]
-position = Vector2( -4086, 420 )
+position = Vector2( -4184, 311 )
 
 [node name="Enemy6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 393, 588 )
